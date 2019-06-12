@@ -6,16 +6,10 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "/helloworld",
-        "function": "helloworld"
-      },
-      {
-        "source": "/time",
-        "function": "time"
-      }
-    ]
+    "rewrites": [{
+      "source": "/webhook/**",
+      "function": "webhook"
+    }]
   },
   "functions": {
     "predeploy": [
