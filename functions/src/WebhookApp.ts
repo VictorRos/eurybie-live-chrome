@@ -36,6 +36,7 @@ export default class WebhookApp {
      */
     private __subscribe() {
         this.__express.get("/subscribe", (_request: express.Request, _response: express.Response) => {
+            this.__twitchAuth;
             _response.send("Subscribe!");
         });
     }
@@ -46,6 +47,7 @@ export default class WebhookApp {
      */
     private __message() {
         this.__express.get("/message", (_request: express.Request, _response: express.Response) => {
+            this.__twitchAuth;
             _response.send("Message!");
         });
     }
@@ -56,6 +58,7 @@ export default class WebhookApp {
      */
     private __unsubscribe() {
         this.__express.get("/unsubscribe", (_request: express.Request, _response: express.Response) => {
+            this.__twitchAuth;
             _response.send("Unsubscribe!");
         });
     }
